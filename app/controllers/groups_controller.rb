@@ -35,7 +35,7 @@ class GroupsController < ApplicationController
     redirect_to groups_path flash[:alert] = "Deleted success"
   end
   def group_params
-    params.requer(:group).permit(:title, :description)
+    params.require(:group).permit(:title, :description)
   end
 
 end
